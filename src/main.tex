@@ -8,10 +8,62 @@
 
 % Packages
 \usepackage{a4wide}
+%\usepackage{verbatim}
+\usepackage{color}   %May be necessary if you want to color links
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true, %set true if you want colored links
+linktoc=all,     %set to all if you want both sections and subsections linked
+linkcolor=black,  %choose some color if you want links to stand out
+}
+
+% define the title
+\author{Zhen-Xiang WANG}
+\title{\LaTeX{} Practice}
 
 % Document
 \begin{document}
+    \maketitle
+    \tableofcontents
+    \section{This is my first section}\label{sec:thisIsMyFirstSection}
+    Well, this is not fun.
+    \section{This is the second}\label{sec:thisIsMySecondSection}
+    A lot of fuker need to learn.
 
-Hello world
+    \ldots{} and here it ends.
+
+    It does not matter whether you
+    enter one or several spaces
+    after a word.
+
+    An empty line starts a new
+    paragraph.
+
+    New \TeX users may miss white spaces after a command.
+    % renders wrong
+    Experienced \TeX{} users are \TeX perts, and know how to use whitespaces.
+    % renders correct
+
+    You can \textsl{lean} on me!
+
+    Please, start a new line
+    right here!\newline
+    Thank you!
+
+
+    This is an % stupid
+    % Better: instructive <----
+    example: Supercal%
+    ifragilist%
+    icexpialidocious
+
+    This is another
+    \begin{comment}
+        rather stupid,
+        but helpful
+    \end{comment}
+    example for embedding
+    comments in your document.
+
 
 \end{document}
