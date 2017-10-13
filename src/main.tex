@@ -4,30 +4,68 @@
 %%
 
 % Preamble
-\documentclass[11pt]{article}
+\documentclass[11pt,twoside,a4paper]{article}
 
 % Packages
-\usepackage{a4wide} % A4 PAPER
+\usepackage{a4wide}
 \usepackage{verbatim} % for block comment
 \usepackage{color}   % May be necessary if you want to color links
 \usepackage{hyperref}
+\usepackage{textcomp}
 \hypersetup{
 colorlinks=true, %set true if you want colored links
 linktoc=all,     %set to all if you want both sections and subsections linked
 linkcolor=black,  %choose some color if you want links to stand out
 }
 
+\usepackage[margin=1in,headheight=13.6pt]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\chead{This is the page header}
+%\cfoot{Page \thepage}
 % define the title
 \author{Zhen-Xiang WANG}
 \title{\LaTeX{} Practice}
 
 % Document
 \begin{document}
+    \thispagestyle{empty}
     \maketitle
     \tableofcontents
 
     \section{This is my first section}\label{sec:thisIsMyFirstSection}
-    Well, this is not fun.
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \Large Not shelfful\\
+    but shelf\mbox{}ful
+
+    \ldots (low dots)\\
+    Not like this ... but like this:\\
+    New York, Tokyo, Budapest, \ldots
+
+    It's $-30\, ^{\circ}mathrm{C}$.
+    I will soon start to
+    super-conduct.\\
+    30 \textcelsius{} is % relying on textcomp package
+    86 \textdegree{}F
+
+    \today{} \LaTeX{} \LaTeXe{} \TeX
+
+    read/write\newline
+    read\slash write
+
+    http://www.rich.edu/\~{}bush
+
+    http://www.clever.edu/$\sim$demo
+
+    15113029g@connect.polyu.hk
+
+    daughter-in-law, X-rated\\
+    pages 13--67\\
+    yes---or no? \\
+    $0$, $1$ and $-1$
+
     \section{This is the second}\label{sec:thisIsMySecondSection}
     A lot of fuker need to learn.
 
@@ -41,9 +79,8 @@ linkcolor=black,  %choose some color if you want links to stand out
     paragraph.
 
     New \TeX users may miss white spaces after a command.
-    % renders wrong
+
     Experienced \TeX{} users are \TeX perts, and know how to use whitespaces.
-    % renders correct
 
     You can \textsl{lean} on me!
 
@@ -51,20 +88,45 @@ linkcolor=black,  %choose some color if you want links to stand out
     right here!\newline
     Thank you!
 
+    \include{file1}
 
     This is an % stupid
     % Better: instructive <----
     example: Supercal%
     ifragilist%
     icexpialidocious
+    %
+    %    This is another
+    %    \begin{comment}
+    %        rather stupid,
+    %        but helpful
+    %    \end{comment}
+    %    example for embedding
+    %    comments in your document
 
-    This is another
-    \begin{comment}
-        rather stupid,
-        but helpful
-    \end{comment}
-    example for embedding
-    comments in your document.
 
+    % Example 1
+    \ldots when Einstein introduced his formula
+    \begin{equation}
+        e = m \cdot c^2 \; ,
+    \end{equation}
+    which is at the same time the most widely known
+    and the least well understood physical formula.
+    % Example 2
+    \ldots from which follows Kirchhoff's current law:
+    \begin{equation}
+        \sum_{k=1}^{n} I_k = 0 \; .
+    \end{equation}
+    Kirchhoff's voltage law can be derived \ldots
+    % Example 3
+    \ldots which has several advantages.
+    \begin{equation}
+        I_D = I_F - I_R
+    \end{equation}
+    is the core of a very different transistor model. \ldots
+
+    ``Please type `X' ''
+
+    "Please type 'X' "
 
 \end{document}
